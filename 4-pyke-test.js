@@ -31,7 +31,7 @@ export default function () {
   const forms = responseAllForms.json();
 
   let index = myVU - 1;
-  if ( index > forms.length) {
+  if ( index >= forms.length) {
     index = 10;
   }
 

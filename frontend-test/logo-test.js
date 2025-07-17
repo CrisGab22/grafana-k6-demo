@@ -24,7 +24,7 @@ export default async function () {
   try {
     /*** LOGO GLOBAL ***/
     console.log('✅ Comprobando logo global');
-    await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+    await page.goto(BASE_URL, { waitUntil: 'load' });
 
     const globalLogoSelector = 'img[src*="logo-funiber-headquarters-global.png"]';
     let globalLogo = null;
@@ -39,12 +39,15 @@ export default async function () {
       'Logo global visible': (el) => el !== null,
     });
 
-    globalLogo&& await page.screenshot({ path: './imagenes/global-logo.png' });
+    globalLogo&& await page.screenshot({ path: './frontend-test/imagenes/global-logo.png' });
     sleep(1);
 
+
+
+    
     /*** LOGO CHINA ***/
     console.log('✅ Comprobando logo china');
-    await page.goto(`${BASE_URL}?headquarter=CN`, { waitUntil: 'networkidle' });
+    await page.goto(`${BASE_URL}?headquarter=CN`, { waitUntil: 'load' });
 
     const chinaLogoSelector = 'img[src*="logo-funiber-headquarters-cn.png"]';
     let chinaLogo = null;
@@ -59,7 +62,7 @@ export default async function () {
       'Logo china visible': (el) => el !== null,
     });
 
-    chinaLogo && await page.screenshot({ path: './imagenes/china-logo.png' });
+    chinaLogo && await page.screenshot({ path: './frontend-test/imagenes/china-logo.png' });
 
   } finally {
     await page.close();

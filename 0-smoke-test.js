@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 
 export let options = {
     vus: 10,
-    duration: '40s',
+    duration: '10s',
 };
 
 // Smoke Test

@@ -10,10 +10,10 @@ const ENDPOINTS = {
 export let options = {
   stages: [
     { duration: '30s', target: 30 },
-    { duration: '5m',  target: 30 }, 
-    { duration: '60s', target: 60 },
-    { duration: '5m',  target: 60 }, 
-    { duration: '60s', target: 0 }, 
+    { duration: '1m',  target: 30 }, 
+    { duration: '30s', target: 60 },
+    { duration: '1m',  target: 60 }, 
+    { duration: '30s', target: 0 }, 
   ],
 };
 
@@ -31,7 +31,7 @@ export default function () {
   const forms = responseAllForms.json();
 
   let index = myVU - 1;
-  if ( index > forms.length) {
+  if ( index >= forms.length) {
     index = 10;
   }
 

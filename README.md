@@ -16,11 +16,11 @@ Este proyecto contiene una colección de scripts de prueba usando [k6](https://k
 k6-demo/
 ├── README.md
 └── scripts/
-├── smoke-test.js
-├── load-test.js
-├── stress-test.js
-├── soak-test.js
-└── spike-test.js
+    ├── smoke-test.js
+    ├── load-test.js
+    ├── stress-test.js
+    ├── soak-test.js
+    └── spike-test.js
 
 ## 🚀 Modo de uso
 
