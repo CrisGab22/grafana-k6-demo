@@ -1,0 +1,12 @@
+{
+  "name": "demo-k6",
+  "version": "1.0.0",
+  "description": "Este proyecto contiene una colección de scripts de prueba usando [k6](https://k6.io/), ideal para evaluar el rendimiento de APIs o servicios web mediante distintos tipos de pruebas como:",
+  "main": "0-smoke-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
